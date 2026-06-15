@@ -1,9 +1,13 @@
 import './style.css'
+import { initAnimations } from './animations.js'
 import campusAuditorium from './assets/campus-auditorium.jpg'
 import auditoriumLayout from './assets/auditorium-layout.jpg'
 import auditoriumRenderSide from './assets/auditorium-render-side.jpg'
 import auditoriumRenderWide from './assets/auditorium-render-wide.jpg'
 import mvPylee from './assets/MV Pylee.png'
+import smsLogo from './assets/SMS Logo.png'
+import cusatLogo from './assets/Logo of CUSAT.jpg'
+import smscusatLogo from './assets/smscusat.png'
 
 const COMMITMENT_FORM_URL = ''
 const DONATION_FORM_URL = ''
@@ -81,16 +85,16 @@ function renderCta(label, url, className = '') {
   return `<a class="button ${className}" href="${url}" target="_blank" rel="noreferrer">${label}<span>Open Form</span></a>`
 }
 
-document.querySelector('#app').innerHTML = `
+const html = `
   <header class="site-header">
     <a class="brand" href="#top" aria-label="SMS Auditorium campaign home">
-      <div class="brand-logo">
-        <span>SMS</span>
-        <em>CUSAT</em>
+      <div class="brand-logos">
+        <img src="${smsLogo}" alt="SMS CUSAT" class="brand-logo-img" />
+        <img src="${cusatLogo}" alt="Cochin University of Science and Technology" class="brand-cusat-img" />
       </div>
       <div class="brand-text">
         <strong>Prof. M. V. Pylee Auditorium</strong>
-        <small>School of Management Studies · Since 1964</small>
+        <small>School of Management Studies · CUSAT</small>
       </div>
     </a>
     <nav aria-label="Campaign sections">
@@ -396,6 +400,7 @@ document.querySelector('#app').innerHTML = `
 
     <section class="final-cta" aria-labelledby="final-cta-title">
       <div class="final-cta-inner">
+        <img src="${smscusatLogo}" alt="School of Management Studies, CUSAT" class="cta-institution-logo" />
         <p class="section-kicker">Let us come together</p>
         <h2 id="final-cta-title">Let us rebuild a space that has been part of all our journeys.</h2>
         <p>Your commitment helps honour Prof. M. V. Pylee, restore a space that shaped generations, and create an auditorium that will inspire the students who follow.</p>
@@ -413,10 +418,7 @@ document.querySelector('#app').innerHTML = `
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="brand-logo footer-brand-logo">
-            <span>SMS</span>
-            <em>CUSAT</em>
-          </div>
+          <img src="${smsLogo}" alt="SMS CUSAT" class="footer-sms-logo" />
           <div>
             <strong>Prof. M. V. Pylee Auditorium</strong>
             <p>School of Management Studies<br>Cochin University of Science and Technology</p>
@@ -436,3 +438,6 @@ document.querySelector('#app').innerHTML = `
     </div>
   </footer>
 `
+
+document.querySelector('#app').innerHTML = html
+initAnimations()
