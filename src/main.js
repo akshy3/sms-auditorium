@@ -5,6 +5,8 @@ import auditoriumLayout from './assets/auditorium-layout.jpg'
 import auditoriumRenderSide from './assets/auditorium-render-side.jpg'
 import auditoriumRenderWide from './assets/auditorium-render-wide.jpg'
 import mvPylee from './assets/MV Pylee.png'
+import auditoriumTransformation from './assets/auditorium-transformation.png'
+import auditoriumInterior from './assets/auditorium (1).png'
 import smsLogo from './assets/SMS Logo.png'
 import cusatLogo from './assets/Logo of CUSAT.jpg'
 import smscusatLogo from './assets/smscusat.png'
@@ -109,7 +111,7 @@ const html = `
   <main id="top">
 
     <section class="hero-section" aria-labelledby="hero-title">
-      <img src="${campusAuditorium}" alt="SMS campus with the Dr. M. V. Pylee Memorial Auditorium" />
+      <img src="${auditoriumInterior}" alt="The proposed Prof. M. V. Pylee Auditorium interior — modern seating, stage and warm lighting" />
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="eyebrow">SMS Auditorium Renovation Campaign · Since 1964</p>
@@ -193,6 +195,32 @@ const html = `
           <h3>Enable what comes next</h3>
           <p>The renewed auditorium will support conferences, executive education, workshops, student development, and cultural life at CUSAT.</p>
         </article>
+      </div>
+    </section>
+
+    <section class="transformation-section" aria-labelledby="transformation-title">
+      <div class="transformation-inner">
+        <div class="transformation-header">
+          <p class="section-kicker">Before &amp; After</p>
+          <h2 id="transformation-title">See what your support will make possible.</h2>
+        </div>
+        <div class="transformation-figure-wrap">
+          <figure class="transformation-figure">
+            <img src="${auditoriumTransformation}" alt="Before and after comparison of the SMS auditorium renovation" />
+            <div class="transform-label transform-label-before">
+              <span>Before</span>
+              <p>Current state</p>
+            </div>
+            <div class="transform-label transform-label-after">
+              <span>After</span>
+              <p>Proposed renovation</p>
+            </div>
+            <div class="transform-divider" aria-hidden="true"></div>
+          </figure>
+          <figcaption class="transformation-caption">
+            Left: The SMS Auditorium as it stands today — worn seating, bare walls, ageing infrastructure. &nbsp;·&nbsp; Right: The proposed Prof. M. V. Pylee Auditorium — modern seating, warm lighting, a dignified stage.
+          </figcaption>
+        </div>
       </div>
     </section>
 
@@ -399,6 +427,8 @@ const html = `
     </section>
 
     <section class="final-cta" aria-labelledby="final-cta-title">
+      <img src="${campusAuditorium}" alt="SMS CUSAT campus — home of the Prof. M. V. Pylee Auditorium" class="final-cta-bg" />
+      <div class="final-cta-overlay"></div>
       <div class="final-cta-inner">
         <img src="${smscusatLogo}" alt="School of Management Studies, CUSAT" class="cta-institution-logo" />
         <p class="section-kicker">Let us come together</p>

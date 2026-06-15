@@ -1,0 +1,17 @@
+{
+  "name": "Prof. M. V. Pylee Auditorium Renovation Campaign",
+  "short_name": "SMS Auditorium",
+  "description": "Alumni-led campaign to renovate the SMS CUSAT auditorium as the Prof. M. V. Pylee Auditorium — a future-ready space for learning, leadership, and pride.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f8f4ee",
+  "theme_color": "#1a2245",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
