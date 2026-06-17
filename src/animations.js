@@ -3,6 +3,8 @@ export function initAnimations() {
   initCounters()
   initScrollProgress()
   initHeaderScroll()
+  initMobileNav()
+  initScrollSpy()
 }
 
 // ── SCROLL REVEAL ──────────────────────────────────────────────────────────
@@ -154,4 +156,53 @@ function initHeaderScroll() {
     () => header.classList.toggle('scrolled', window.scrollY > 80),
     { passive: true }
   )
+}
+
+// ── MOBILE NAV ─────────────────────────────────────────────────────────────
+function initMobileNav() {
+  const header = document.querySelector('.site-header')
+  const toggle = document.querySelector('.nav-toggle')
+  const nav    = document.querySelector('#site-nav')
+  if (!header || !toggle || !nav) return
+
+  function isOpen() { return header.classList.contains('nav-open') }
+
+  function open() {
+    header.classList.add('nav-open')
+    toggle.setAttribute('aria-expanded', 'true')
+    toggle.setAttribute('aria-label', 'Close navigation menu')
+  }
+
+  function close() {
+    header.classList.remove('nav-open')
+    toggle.setAttribute('aria-expanded', 'false')
+    toggle.setAttribute('aria-label', 'Open navigation menu')
+  }
+
+  toggle.addEventListener('click', () => isOpen() ? close() : open())
+
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', close))
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && isOpen()) close() })
+
+  document.addEventListener('click', e => {
+    if (isOpen() && !header.contains(e.target)) close()
+  })
+}
+
+// ── SCROLL SPY ─────────────────────────────────────────────────────────────
+function initScrollSpy() {
+  const sectionIds = ['scope', 'tiers', 'transparency', 'contact']
+  const links = sectionIds.map(id => document.querySelector(`.site-header nav a[href="#${id}"]`))
+  const sections = sectionIds.map(id => document.getElementById(id))
+
+  function update() {
+    const threshold = window.scrollY + 100
+    let current = -1
+    sections.forEach((el, i) => { if (el && el.offsetTop <= threshold) current = i })
+    links.forEach((link, i) => link?.classList.toggle('nav-active', i === current))
+  }
+
+  window.addEventListener('scroll', update, { passive: true })
+  update()
 }

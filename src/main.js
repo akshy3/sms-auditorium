@@ -89,17 +89,24 @@ function renderCta(label, url, className = '') {
 
 const html = `
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="SMS Auditorium campaign home">
-      <div class="brand-logos">
-        <img src="${smsLogo}" alt="SMS CUSAT" class="brand-logo-img" />
-        <img src="${cusatLogo}" alt="Cochin University of Science and Technology" class="brand-cusat-img" />
-      </div>
-      <div class="brand-text">
-        <strong>Prof. M. V. Pylee Auditorium</strong>
-        <small>School of Management Studies · CUSAT</small>
-      </div>
-    </a>
-    <nav aria-label="Campaign sections">
+    <div class="header-top">
+      <a class="brand" href="#top" aria-label="SMS Auditorium campaign home">
+        <div class="brand-logos">
+          <img src="${smsLogo}" alt="SMS CUSAT" class="brand-logo-img" />
+          <img src="${cusatLogo}" alt="Cochin University of Science and Technology" class="brand-cusat-img" />
+        </div>
+        <div class="brand-text">
+          <strong>Prof. M. V. Pylee Auditorium</strong>
+          <small>School of Management Studies · CUSAT</small>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-bar"></span>
+        <span class="nav-bar"></span>
+        <span class="nav-bar"></span>
+      </button>
+    </div>
+    <nav id="site-nav" aria-label="Campaign sections">
       <a href="#scope">Scope</a>
       <a href="#tiers">Contribute</a>
       <a href="#transparency">Transparency</a>
