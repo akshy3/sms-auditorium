@@ -153,6 +153,47 @@ const html = `
       </div>
     </section>
 
+    <section class="pylee-section" aria-labelledby="pylee-title">
+      <div class="pylee-inner">
+        <div class="pylee-left">
+          <p class="section-kicker pylee-kicker">A Tribute to Our Founder</p>
+          <h2 id="pylee-title">Padmabhushan<br>Prof. M. V. Pylee</h2>
+          <div class="pylee-portrait-wrap">
+            <img src="${mvPylee}" alt="Prof. M. V. Pylee, Founder Director of SMS CUSAT" class="pylee-portrait" />
+          </div>
+          <blockquote class="pylee-quote">
+            "The visionary Founder Director of the School of Management Studies — Father of management education in Kerala and a mentor who shaped generations of leaders. His contributions extended far beyond the classroom, influencing academia, industry, and institutional development."
+          </blockquote>
+        </div>
+        <div class="pylee-right">
+          <div class="pylee-cred">
+            <div class="pylee-cred-icon">${icons.award}</div>
+            <div>
+              <strong>Padma Bhushan</strong>
+              <span>India's third highest civilian honour</span>
+            </div>
+          </div>
+          <div class="pylee-cred">
+            <div class="pylee-cred-icon">${icons.school}</div>
+            <div>
+              <strong>Founder Director, SMS CUSAT</strong>
+              <span>Established the School of Management Studies in 1964</span>
+            </div>
+          </div>
+          <div class="pylee-cred">
+            <div class="pylee-cred-icon">${icons.book}</div>
+            <div>
+              <strong>Father of Management Education</strong>
+              <span>In Kerala — six decades of shaping leaders</span>
+            </div>
+          </div>
+          <div class="pylee-dedication">
+            Renaming this auditorium in his honour is not just a gesture — it is a declaration of where we come from and who we aspire to be.
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="tagline-band">
       <div class="tagline-inner">
         <span class="tagline-label">Reimagining a CUSAT Landmark</span>
@@ -227,47 +268,6 @@ const html = `
           <figcaption class="transformation-caption">
             Left: The SMS Auditorium as it stands today — worn seating, bare walls, ageing infrastructure. &nbsp;·&nbsp; Right: The proposed Prof. M. V. Pylee Auditorium — modern seating, warm lighting, a dignified stage.
           </figcaption>
-        </div>
-      </div>
-    </section>
-
-    <section class="pylee-section" aria-labelledby="pylee-title">
-      <div class="pylee-inner">
-        <div class="pylee-left">
-          <p class="section-kicker pylee-kicker">A Tribute to Our Founder</p>
-          <h2 id="pylee-title">Padmabhushan<br>Prof. M. V. Pylee</h2>
-          <div class="pylee-portrait-wrap">
-            <img src="${mvPylee}" alt="Prof. M. V. Pylee, Founder Director of SMS CUSAT" class="pylee-portrait" />
-          </div>
-          <blockquote class="pylee-quote">
-            "The visionary Founder Director of the School of Management Studies — Father of management education in Kerala and a mentor who shaped generations of leaders. His contributions extended far beyond the classroom, influencing academia, industry, and institutional development."
-          </blockquote>
-        </div>
-        <div class="pylee-right">
-          <div class="pylee-cred">
-            <div class="pylee-cred-icon">${icons.award}</div>
-            <div>
-              <strong>Padma Bhushan</strong>
-              <span>India's third highest civilian honour</span>
-            </div>
-          </div>
-          <div class="pylee-cred">
-            <div class="pylee-cred-icon">${icons.school}</div>
-            <div>
-              <strong>Founder Director, SMS CUSAT</strong>
-              <span>Established the School of Management Studies in 1964</span>
-            </div>
-          </div>
-          <div class="pylee-cred">
-            <div class="pylee-cred-icon">${icons.book}</div>
-            <div>
-              <strong>Father of Management Education</strong>
-              <span>In Kerala — six decades of shaping leaders</span>
-            </div>
-          </div>
-          <div class="pylee-dedication">
-            Renaming this auditorium in his honour is not just a gesture — it is a declaration of where we come from and who we aspire to be.
-          </div>
         </div>
       </div>
     </section>
