@@ -278,19 +278,22 @@ const html = `
 
     <section class="section matters-section" aria-labelledby="matters-title">
       <p class="section-kicker">Why this project matters</p>
-      <h2 id="matters-title">A hall, a tribute, and a platform for what comes next.</h2>
+      <h2 id="matters-title">A hall, a tribute, and<br>a platform for what comes next.</h2>
       <div class="matter-grid">
         <article class="matter-card">
+          <div class="matter-icon">${icons.school}</div>
           <div class="matter-num">01</div>
           <h3>Restore what built us</h3>
           <p>The auditorium shaped inductions, Talent Time, debates, farewells, and the stories every SMS batch carries forward.</p>
         </article>
         <article class="matter-card">
+          <div class="matter-icon">${icons.award}</div>
           <div class="matter-num">02</div>
           <h3>Honour who built SMS</h3>
           <p>Naming the renovated facility for Padma Bhushan Prof. M. V. Pylee creates a lasting tribute to the founder and pioneer of management education in Kerala.</p>
         </article>
         <article class="matter-card">
+          <div class="matter-icon">${icons.trending}</div>
           <div class="matter-num">03</div>
           <h3>Enable what comes next</h3>
           <p>The renewed auditorium will support conferences, executive education, workshops, student development, and cultural life at CUSAT.</p>
