@@ -173,7 +173,7 @@ const html = `
       <img src="${auditoriumInterior}" alt="The proposed Prof. M. V. Pylee Auditorium interior — modern seating, stage and warm lighting" />
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <p class="eyebrow">SMS Auditorium Renovation Campaign · Since 1964</p>
+        <p class="eyebrow">SMS Auditorium Renovation Campaign</p>
         <h1 id="hero-title">Together, let us<br>rebuild what<br>built us.</h1>
         <p class="hero-copy">A collective alumni-led effort to transform the SMS auditorium into the Prof. M. V. Pylee Auditorium — a future-ready space for learning, leadership, memory, and pride.</p>
         <div class="hero-actions">
