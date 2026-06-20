@@ -14,6 +14,7 @@ export function initAnimations() {
 function initScrollReveal() {
   // Group staggered selectors by their parent so each grid resets delay counter
   const staggered = [
+    '.sms-cred-card',
     '.matter-card',
     '.intro-stat',
     '.tier-card',

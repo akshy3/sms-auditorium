@@ -79,7 +79,16 @@ const icons = {
   book: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
   chevron: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>`,
   copy: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>`,
+  trophy: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>`,
+  trending: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>`,
+  star: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
 }
+
+const smsCredentials = [
+  ['trophy', 'NIRF 2025', '#1 Non-IIM Business School in Kerala', 'Ranked among the top 100 business schools in India out of 4,000+ institutions as per NIRF 2025.'],
+  ['trending', 'Value', "One of India's Highest ROI Propositions", "In management education, powered by CUSAT's NIRF Rank 32 and QS-ranked ecosystem."],
+  ['star', 'Excellence', 'Academic Rigor, Industry Relevance, Affordability', 'Recognised across decades as the defining advantage that sets SMS graduates apart.'],
+]
 
 const qrPlaceholderSvg = `<svg class="qr-placeholder-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
   <rect x="5" y="5" width="28" height="28" rx="2" fill="currentColor"/>
@@ -273,6 +282,26 @@ const html = `
         <span class="stat-number">338</span>
         <h3>Proposed Seats</h3>
         <p>A modern academic and cultural hall for future cohorts</p>
+      </div>
+    </section>
+
+    <section class="section sms-section" aria-labelledby="sms-title">
+      <div class="sms-header">
+        <div>
+          <p class="section-kicker">About SMS CUSAT</p>
+          <h2 id="sms-title">Advancing management excellence since 1964.</h2>
+        </div>
+        <div class="sms-since-badge">Since<br>1964</div>
+      </div>
+      <div class="sms-cred-grid">
+        ${smsCredentials.map(([icon, label, title, desc]) => `
+          <article class="sms-cred-card">
+            <div class="sms-cred-icon">${icons[icon]}</div>
+            <p class="sms-cred-label">${label}</p>
+            <h3>${title}</h3>
+            <p>${desc}</p>
+          </article>
+        `).join('')}
       </div>
     </section>
 
