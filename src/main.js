@@ -65,19 +65,20 @@ const transparencyItems = [
 ]
 
 const icons = {
-  seat: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M2 17a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-1H2v1z"/><path d="M8 19v2m8-2v2"/></svg>`,
-  av: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>`,
-  stage: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/></svg>`,
-  light: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/><circle cx="12" cy="12" r="4"/></svg>`,
-  ac: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="8" rx="2"/><path d="M12 11v10m-4-4 4 4 4-4"/></svg>`,
-  digital: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>`,
-  access: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="m9 11 3-3 3 3m-3-3v8m-3 0H6m6 0h3"/></svg>`,
-  civil: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 7l9-4 9 4M4 10v11m16-11v11M9 21v-5h6v5"/></svg>`,
-  bank: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11m16-11v11M8 10v11M12 10v11M16 10v11"/></svg>`,
-  award: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>`,
-  school: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/><path d="M12 4v2m-3 4h6"/></svg>`,
-  book: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
-  chevron: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>`,
+  seat: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M2 17a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-1H2v1z"/><path d="M8 19v2m8-2v2"/></svg>`,
+  av: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>`,
+  stage: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-4h6v4"/></svg>`,
+  light: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/><circle cx="12" cy="12" r="4"/></svg>`,
+  ac: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="8" rx="2"/><path d="M12 11v10m-4-4 4 4 4-4"/></svg>`,
+  digital: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>`,
+  access: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><path d="m9 11 3-3 3 3m-3-3v8m-3 0H6m6 0h3"/></svg>`,
+  civil: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 7l9-4 9 4M4 10v11m16-11v11M9 21v-5h6v5"/></svg>`,
+  bank: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11m16-11v11M8 10v11M12 10v11M16 10v11"/></svg>`,
+  award: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>`,
+  school: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/><path d="M12 4v2m-3 4h6"/></svg>`,
+  book: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
+  chevron: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>`,
+  copy: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>`,
 }
 
 function renderCta(label, url, className = '') {
@@ -159,7 +160,7 @@ const html = `
           <p class="section-kicker pylee-kicker">A Tribute to Our Founder</p>
           <h2 id="pylee-title">Padmabhushan<br>Prof. M. V. Pylee</h2>
           <div class="pylee-portrait-wrap">
-            <img src="${mvPylee}" alt="Prof. M. V. Pylee, Founder Director of SMS CUSAT" class="pylee-portrait" />
+            <img src="${mvPylee}" alt="Prof. M. V. Pylee, Founder Director of SMS CUSAT" class="pylee-portrait" loading="lazy" />
           </div>
           <blockquote class="pylee-quote">
             "The visionary Founder Director of the School of Management Studies — Father of management education in Kerala and a mentor who shaped generations of leaders. His contributions extended far beyond the classroom, influencing academia, industry, and institutional development."
@@ -254,7 +255,7 @@ const html = `
         </div>
         <div class="transformation-figure-wrap">
           <figure class="transformation-figure">
-            <img src="${auditoriumTransformation}" alt="Before and after comparison of the SMS auditorium renovation" />
+            <img src="${auditoriumTransformation}" alt="Before and after comparison of the SMS auditorium renovation" loading="lazy" />
             <div class="transform-label transform-label-before">
               <span>Before</span>
               <p>Current state</p>
@@ -285,7 +286,7 @@ const html = `
         </ul>
       </div>
       <figure>
-        <img src="${auditoriumRenderWide}" alt="Proposed renovated auditorium interior" />
+        <img src="${auditoriumRenderWide}" alt="Proposed renovated auditorium interior" loading="lazy" />
         <figcaption>Proposed auditorium interior concept</figcaption>
       </figure>
     </section>
@@ -320,7 +321,7 @@ const html = `
         <div class="scope-detail-body">
           <div class="scope-layout">
             <figure>
-              <img src="${auditoriumLayout}" alt="Proposed layout plan for the CUSAT auditorium renovation" />
+              <img src="${auditoriumLayout}" alt="Proposed layout plan for the CUSAT auditorium renovation" loading="lazy" />
               <figcaption>Proposed layout plan</figcaption>
             </figure>
             <div class="scope-list">
@@ -362,7 +363,7 @@ const html = `
 
     <section class="split-section participation-section" aria-labelledby="participation-title">
       <figure>
-        <img src="${auditoriumRenderSide}" alt="Proposed auditorium side view with stage, seating and lectern" />
+        <img src="${auditoriumRenderSide}" alt="Proposed auditorium side view with stage, seating and lectern" loading="lazy" />
         <figcaption>Concept view of the renewed academic space</figcaption>
       </figure>
       <div class="split-text">
@@ -425,8 +426,8 @@ const html = `
             <div class="bank-row"><dt>Account Name</dt><dd>SMS Infrastructure Development</dd></div>
             <div class="bank-row"><dt>Bank</dt><dd>State Bank of India</dd></div>
             <div class="bank-row"><dt>Branch</dt><dd>Cochin University Campus Branch</dd></div>
-            <div class="bank-row"><dt>Account Number</dt><dd class="bank-mono">44972355745</dd></div>
-            <div class="bank-row"><dt>IFSC Code</dt><dd class="bank-mono">SBIN0070235</dd></div>
+            <div class="bank-row"><dt>Account Number</dt><dd class="bank-mono">44972355745<button class="copy-btn" data-copy="44972355745" aria-label="Copy account number">${icons.copy}</button></dd></div>
+            <div class="bank-row"><dt>IFSC Code</dt><dd class="bank-mono">SBIN0070235<button class="copy-btn" data-copy="SBIN0070235" aria-label="Copy IFSC code">${icons.copy}</button></dd></div>
           </dl>
           <p class="bank-note">Please share your name and batch year after transferring so we can acknowledge your contribution.</p>
         </div>
@@ -434,10 +435,10 @@ const html = `
     </section>
 
     <section class="final-cta" aria-labelledby="final-cta-title">
-      <img src="${campusAuditorium}" alt="SMS CUSAT campus — home of the Prof. M. V. Pylee Auditorium" class="final-cta-bg" />
+      <img src="${campusAuditorium}" alt="SMS CUSAT campus — home of the Prof. M. V. Pylee Auditorium" class="final-cta-bg" loading="lazy" />
       <div class="final-cta-overlay"></div>
       <div class="final-cta-inner">
-        <img src="${smscusatLogo}" alt="School of Management Studies, CUSAT" class="cta-institution-logo" />
+        <img src="${smscusatLogo}" alt="School of Management Studies, CUSAT" class="cta-institution-logo" loading="lazy" />
         <p class="section-kicker">Let us come together</p>
         <h2 id="final-cta-title">Let us rebuild a space that has been part of all our journeys.</h2>
         <p>Your commitment helps honour Prof. M. V. Pylee, restore a space that shaped generations, and create an auditorium that will inspire the students who follow.</p>
@@ -455,7 +456,7 @@ const html = `
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="${smsLogo}" alt="SMS CUSAT" class="footer-sms-logo" />
+          <img src="${smsLogo}" alt="SMS CUSAT" class="footer-sms-logo" loading="lazy" />
           <div>
             <strong>Prof. M. V. Pylee Auditorium</strong>
             <p>School of Management Studies<br>Cochin University of Science and Technology</p>

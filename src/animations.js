@@ -5,6 +5,8 @@ export function initAnimations() {
   initHeaderScroll()
   initMobileNav()
   initScrollSpy()
+  initBackToTop()
+  initCopyButtons()
 }
 
 // ── SCROLL REVEAL ──────────────────────────────────────────────────────────
@@ -187,6 +189,45 @@ function initMobileNav() {
 
   document.addEventListener('click', e => {
     if (isOpen() && !header.contains(e.target)) close()
+  })
+}
+
+// ── BACK TO TOP ────────────────────────────────────────────────────────────
+function initBackToTop() {
+  const btn = document.createElement('button')
+  btn.className = 'back-to-top'
+  btn.setAttribute('aria-label', 'Back to top')
+  btn.innerHTML = `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>`
+  document.body.appendChild(btn)
+
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 400)
+  }, { passive: true })
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  })
+}
+
+// ── COPY BUTTONS ───────────────────────────────────────────────────────────
+function initCopyButtons() {
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const text = btn.dataset.copy
+      try {
+        await navigator.clipboard.writeText(text)
+      } catch {
+        const ta = document.createElement('textarea')
+        ta.value = text
+        ta.style.cssText = 'position:fixed;opacity:0;pointer-events:none'
+        document.body.appendChild(ta)
+        ta.select()
+        document.execCommand('copy')
+        document.body.removeChild(ta)
+      }
+      btn.classList.add('copied')
+      setTimeout(() => btn.classList.remove('copied'), 2000)
+    })
   })
 }
 
