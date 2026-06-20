@@ -2,8 +2,7 @@ import './style.css'
 import { initAnimations } from './animations.js'
 import campusAuditorium from './assets/campus-auditorium.jpg'
 import auditoriumLayout from './assets/auditorium-layout.jpg'
-import auditoriumRenderSide from './assets/auditorium-render-side.jpg'
-import auditoriumRenderWide from './assets/auditorium-render-wide.jpg'
+import smsBuilding from './assets/sms.png'
 import mvPylee from './assets/MV Pylee.png'
 import auditoriumTransformation from './assets/auditorium-transformation.png'
 import auditoriumInterior from './assets/auditorium (1).png'
@@ -338,8 +337,8 @@ const html = `
         </ul>
       </div>
       <figure>
-        <img src="${auditoriumRenderWide}" alt="Proposed renovated auditorium interior" loading="lazy" />
-        <figcaption>Proposed auditorium interior concept</figcaption>
+        <img src="${smsBuilding}" alt="School of Management Studies, CUSAT campus" loading="lazy" />
+        <figcaption>School of Management Studies, CUSAT</figcaption>
       </figure>
     </section>
 
