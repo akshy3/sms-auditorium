@@ -50,12 +50,6 @@ const contributionTiers = [
   { title: 'Friends of SMS', amount: 'Below ₹1 Lakh', recognition: 'Contributor acknowledgement certificate', tier: 'friends' },
 ]
 
-const participationPaths = [
-  ['Individual Alumni', 'A personal way to honour the place where journeys began, voices were found, and friendships became lifelong.'],
-  ['Batch Contributions', 'Pool support batch-wise, build shared recognition, and make participation easier across graduating years.'],
-  ['Corporate / CSR', 'Enable larger contributions through alumni-led organisations and institutional relationships.'],
-  ['Friends of Prof. Pylee', 'Invite admirers, family, and well-wishers to be part of a lasting tribute to his extraordinary legacy.'],
-]
 
 const transparencyItems = [
   ['Financial transparency', 'Periodic updates on funds raised, allocation, utilisation, and batch/category-wise participation.'],
@@ -419,24 +413,6 @@ const html = `
       <p class="tier-note">Recognition may include donor plaques, named sections, seating rows, audio systems, air-conditioning, stage elements, and digital acknowledgements, subject to institutional policy.</p>
     </section>
 
-    <section class="split-section participation-section" aria-labelledby="participation-title">
-      <figure>
-        <img src="${auditoriumRenderSide}" alt="Proposed auditorium side view with stage, seating and lectern" loading="lazy" />
-        <figcaption>Concept view of the renewed academic space</figcaption>
-      </figure>
-      <div class="split-text">
-        <p class="section-kicker">Ways to participate</p>
-        <h2 id="participation-title">Designed for alumni first, with room for every supporter.</h2>
-        <div class="path-list">
-          ${participationPaths.map(([title, description]) => `
-            <article class="path-item">
-              <h3>${title}</h3>
-              <p>${description}</p>
-            </article>
-          `).join('')}
-        </div>
-      </div>
-    </section>
 
     <section class="section transparency-section" id="transparency" aria-labelledby="transparency-title">
       <p class="section-kicker">Transparency and governance</p>
