@@ -7,6 +7,7 @@ export function initAnimations() {
   initScrollSpy()
   initBackToTop()
   initCopyButtons()
+  initDonationModal()
 }
 
 // ── SCROLL REVEAL ──────────────────────────────────────────────────────────
@@ -189,6 +190,38 @@ function initMobileNav() {
 
   document.addEventListener('click', e => {
     if (isOpen() && !header.contains(e.target)) close()
+  })
+}
+
+// ── DONATION MODAL ─────────────────────────────────────────────────────────
+function initDonationModal() {
+  const overlay = document.getElementById('donation-modal')
+  if (!overlay) return
+  const box = overlay.querySelector('.modal-box')
+
+  function open() {
+    overlay.hidden = false
+    document.body.style.overflow = 'hidden'
+    box.focus()
+  }
+
+  function close() {
+    overlay.hidden = true
+    document.body.style.overflow = ''
+  }
+
+  document.querySelectorAll('[data-open-modal="donation"]').forEach(btn => {
+    btn.addEventListener('click', open)
+  })
+
+  overlay.querySelector('.modal-close').addEventListener('click', close)
+
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) close()
+  })
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !overlay.hidden) close()
   })
 }
 
