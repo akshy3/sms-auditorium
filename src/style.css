@@ -493,7 +493,6 @@ figcaption {
 
 .sms-header h2 {
   color: var(--white);
-  max-width: 560px;
 }
 
 .sms-since-badge {
