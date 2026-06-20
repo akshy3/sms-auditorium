@@ -168,7 +168,7 @@ const html = `
       </button>
     </div>
     <nav id="site-nav" aria-label="Campaign sections">
-      <a href="#scope">Scope</a>
+      <a href="#scope">Use of Funds</a>
       <a href="#tiers">Contribute</a>
       <a href="#transparency">Transparency</a>
       <a href="#contact">Contact</a>
@@ -521,7 +521,7 @@ const html = `
           </div>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="#scope">Scope of Work</a>
+          <a href="#scope">Use of Funds</a>
           <a href="#tiers">Contribution Tiers</a>
           <a href="#transparency">Transparency</a>
           <a href="#contact">Contact</a>
