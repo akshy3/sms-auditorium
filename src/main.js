@@ -522,7 +522,7 @@ const html = `
       </div>
       <div class="footer-bottom">
         <p>Funds are managed by the SMS Alumni Association. All contributions are subject to institutional governance and independent audit.</p>
-        <p class="footer-tagline">Reimagining a CUSAT Landmark · Since 1964</p>
+        <p class="footer-tagline">Reimagining a CUSAT Landmark</p>
       </div>
     </div>
   </footer>
