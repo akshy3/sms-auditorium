@@ -16,7 +16,6 @@ function initScrollReveal() {
   const staggered = [
     '.sms-cred-card',
     '.matter-card',
-    '.intro-stat',
     '.tier-card',
     '.scope-cat',
     '.transparency-card',

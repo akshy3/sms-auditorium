@@ -262,28 +262,6 @@ const html = `
       </div>
     </div>
 
-    <section class="intro-band" aria-label="Campaign highlights">
-      <div class="intro-stat">
-        <span class="stat-number">#1</span>
-        <h3>Non-IIM Business School in Kerala</h3>
-        <p>Top 100 in India · NIRF 2025 · QS-ranked CUSAT ecosystem</p>
-      </div>
-      <div class="intro-stat">
-        <span class="stat-number">60+</span>
-        <h3>Years of Shared Legacy</h3>
-        <p>A space remembered across every SMS generation since 1964</p>
-      </div>
-      <div class="intro-stat">
-        <span class="stat-number">8,000+</span>
-        <h3>Students in CUSAT Ecosystem</h3>
-        <p>A vibrant, growing campus community this space will serve</p>
-      </div>
-      <div class="intro-stat">
-        <span class="stat-number">338</span>
-        <h3>Proposed Seats</h3>
-        <p>A modern academic and cultural hall for future cohorts</p>
-      </div>
-    </section>
 
     <section class="section sms-section" aria-labelledby="sms-title">
       <div class="sms-header">
