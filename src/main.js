@@ -260,7 +260,7 @@ const html = `
       <div class="sms-header">
         <div>
           <p class="section-kicker">About SMS CUSAT</p>
-          <h2 id="sms-title">Advancing management excellence since 1964.</h2>
+          <h2 id="sms-title">Advancing management excellence.</h2>
         </div>
         <div class="sms-since-badge">Since<br>1964</div>
       </div>
