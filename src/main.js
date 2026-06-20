@@ -212,7 +212,7 @@ const html = `
       <div class="pylee-inner">
         <div class="pylee-left">
           <p class="section-kicker pylee-kicker">A Tribute to Our Founder</p>
-          <h2 id="pylee-title">Padmabhushan<br>Prof. M. V. Pylee</h2>
+          <h2 id="pylee-title">Padma Bhushan<br>Prof. M. V. Pylee</h2>
           <div class="pylee-portrait-wrap">
             <img src="${mvPylee}" alt="Prof. M. V. Pylee, Founder Director of SMS CUSAT" class="pylee-portrait" loading="lazy" />
           </div>
@@ -238,8 +238,8 @@ const html = `
           <div class="pylee-cred">
             <div class="pylee-cred-icon">${icons.book}</div>
             <div>
-              <strong>Father of Management Education</strong>
-              <span>In Kerala — six decades of shaping leaders</span>
+              <strong>Father of Management Education in Kerala</strong>
+              <span>Six decades of shaping leaders</span>
             </div>
           </div>
           <div class="pylee-dedication">
