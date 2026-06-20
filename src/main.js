@@ -11,8 +11,8 @@ import smsLogo from './assets/SMS Logo.png'
 import cusatLogo from './assets/Logo of CUSAT.jpg'
 import smscusatLogo from './assets/smscusat.png'
 
-const COMMITMENT_FORM_URL = ''
-const DONATION_FORM_URL = ''
+const COMMITMENT_FORM_URL = 'https://forms.gle/f9nAfvDYh3UQ4uhX8'
+const DONATION_FORM_URL = 'https://forms.gle/RaiL2NQ4xJ8MWcab9'
 
 const scopeCategories = [
   ['Seating Refurbishment', 'Refurbishing all auditorium seating for comfort and longevity', 'seat'],
