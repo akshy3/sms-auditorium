@@ -331,10 +331,11 @@ const html = `
       <div class="split-text">
         <p class="section-kicker">Legacy and future</p>
         <h2 id="legacy-title">More than a hall: a shared memory becoming a future-ready academic space.</h2>
-        <p>The SMS auditorium has been a silent witness to thousands of beginnings, performances, ideas, celebrations, and farewells. Today, it no longer reflects the stature or aspirations of SMS. This renovation restores a beloved space while preparing it for new programmes, leadership events, and student experiences.</p>
+        <p>CUSAT's earliest and most cherished auditorium, the SMS Auditorium stands as a defining landmark in the university's journey — a centre stage for knowledge, culture, and collaboration across generations. Today, within a vibrant CUSAT ecosystem of 8,000+ students, this iconic space is being reimagined to further elevate its role as a modern hub for:</p>
         <ul class="legacy-list">
           <li>Academic conferences &amp; seminars</li>
           <li>Executive education &amp; part-time programmes</li>
+          <li>Regular meetings of professional bodies</li>
           <li>Workshops, MDPs &amp; training programmes</li>
           <li>Student development &amp; cultural activities</li>
         </ul>
