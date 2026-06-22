@@ -378,38 +378,6 @@ h1 {
   line-height: 1.5;
 }
 
-/* ── TAGLINE BAND ── */
-.tagline-band {
-  background: var(--paper-deep);
-  padding: 28px clamp(20px, 6vw, 80px);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.tagline-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.tagline-label {
-  flex: 0 0 auto;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.15rem;
-  color: var(--gold);
-  white-space: nowrap;
-}
-
-.tagline-inner p {
-  color: var(--muted);
-  font-size: 0.94rem;
-  line-height: 1.6;
-  border-top: 1px solid var(--line-gold);
-  padding-top: 14px;
-}
 
 
 /* ── SHARED SECTION ── */
@@ -1622,8 +1590,6 @@ figcaption {
   .sms-since-badge { display: block; }
   .tier-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .transparency-grid { grid-template-columns: repeat(2, 1fr); }
-  .tagline-inner { flex-direction: row; align-items: center; gap: 28px; }
-  .tagline-inner p { border-top: none; padding-top: 0; border-left: 1px solid var(--line-gold); padding-left: 28px; }
   .footer-top { flex-direction: row; gap: 40px; }
   .footer-bottom { flex-direction: row; align-items: center; gap: 20px; }
   .footer-tagline { white-space: nowrap !important; }

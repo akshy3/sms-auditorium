@@ -166,9 +166,9 @@ const html = `
       <img src="${auditoriumInterior}" alt="The proposed Prof. M. V. Pylee Auditorium interior — modern seating, stage and warm lighting" />
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <p class="eyebrow">SMS Auditorium Renovation</p>
+        <p class="eyebrow">Rebuilding a Legacy</p>
         <h1 id="hero-title">Together, let us<br>rebuild what<br>built us.</h1>
-        <p class="hero-copy">A collective alumni-led effort to transform the SMS auditorium into the Prof. M. V. Pylee Auditorium — a future-ready space for learning, leadership, memory, and pride. This hall was there for your first day, your debates, your farewells. Now it is our turn to be there for it.</p>
+        <p class="hero-copy">The SMS Auditorium has witnessed every beginning, celebration, and farewell since 1964. Today, as alumni, we restore it together — transforming it into the Prof. M. V. Pylee Auditorium, a future-ready space for learning, leadership, memory, and pride. This hall was there for your first day, your debates, your farewells. Now it is our turn to be there for it.</p>
         <div class="hero-actions">
           ${renderCta('Make a Commitment', COMMITMENT_FORM_URL, 'primary')}
           ${renderCta('Complete Donation', DONATION_FORM_URL, 'secondary', 'donation')}
@@ -211,13 +211,6 @@ const html = `
         `).join('')}
       </div>
     </section>
-
-    <div class="tagline-band">
-      <div class="tagline-inner">
-        <span class="tagline-label">Rebuilding a Legacy</span>
-        <p>The SMS Auditorium has witnessed every beginning, celebration, and farewell since 1964. Today, we restore it together — for the generations ahead.</p>
-      </div>
-    </div>
 
 
     <section class="section sms-section" aria-labelledby="sms-title">
