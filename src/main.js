@@ -60,10 +60,12 @@ const icons = {
   star: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
 }
 
-const smsCredentials = [
-  ['trophy', 'NIRF 2025', '#1 Non-IIM Business School in Kerala', 'Ranked among the top 100 business schools in India out of 4,000+ institutions as per NIRF 2025.'],
-  ['trending', 'Value', "One of India's Highest ROI Propositions", "In management education, powered by CUSAT's NIRF Rank 32 and QS-ranked ecosystem."],
-  ['star', 'Excellence', 'Academic Rigor, Industry Relevance, Affordability', 'Recognised across decades as the defining advantage that sets SMS graduates apart.'],
+const auditoriumMemories = [
+  'Where journeys began with induction programmes',
+  'Where voices were discovered on stage',
+  'Where felicitation and cultural events came alive',
+  'Where ideas were debated and celebrated',
+  'Where friendships were formed and farewells became unforgettable',
 ]
 
 const qrPlaceholderSvg = `<svg class="qr-placeholder-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
@@ -191,7 +193,7 @@ const html = `
 
     <div class="tagline-band">
       <div class="tagline-inner">
-        <span class="tagline-label">Reimagining a CUSAT Landmark</span>
+        <span class="tagline-label">Rebuilding a Legacy</span>
         <p>The SMS Auditorium has witnessed every beginning, celebration, and farewell since 1964. Today, we restore it together — for the generations ahead.</p>
       </div>
     </div>
@@ -200,21 +202,14 @@ const html = `
     <section class="section sms-section" aria-labelledby="sms-title">
       <div class="sms-header">
         <div>
-          <p class="section-kicker">About SMS CUSAT</p>
-          <h2 id="sms-title">Advancing management excellence.</h2>
+          <p class="section-kicker">The SMS Auditorium</p>
+          <h2 id="sms-title">This hall shaped every one of us.</h2>
         </div>
         <div class="sms-since-badge">Since<br>1964</div>
       </div>
-      <div class="sms-cred-grid">
-        ${smsCredentials.map(([icon, label, title, desc]) => `
-          <article class="sms-cred-card">
-            <div class="sms-cred-icon">${icons[icon]}</div>
-            <p class="sms-cred-label">${label}</p>
-            <h3>${title}</h3>
-            <p>${desc}</p>
-          </article>
-        `).join('')}
-      </div>
+      <ul class="alumni-memory-list">
+        ${auditoriumMemories.map(m => `<li>${m}</li>`).join('')}
+      </ul>
     </section>
 
     <section class="section matters-section" aria-labelledby="matters-title">
@@ -304,7 +299,7 @@ const html = `
     <section class="section tiers-section" id="tiers" aria-labelledby="tiers-title">
       <p class="section-kicker">Contribution tiers</p>
       <h2 id="tiers-title">Every name will be remembered.</h2>
-      <p class="tiers-intro">Structured recognition for every scale of support — from individuals to institutions.</p>
+      <p class="tiers-intro">Every contribution matters. Every name will be remembered.</p>
       <div class="tier-grid">
         ${contributionTiers.map(({ title, amount, recognition, tier }) => `
           <article class="tier-card tier-${tier}">
@@ -410,7 +405,7 @@ const html = `
       </div>
       <div class="footer-bottom">
         <p>Funds are managed by the SMS Alumni Association. All contributions are subject to institutional governance and independent audit.</p>
-        <p class="footer-tagline">Reimagining a CUSAT Landmark</p>
+        <p class="footer-tagline">Rebuilding a Legacy</p>
       </div>
     </div>
   </footer>

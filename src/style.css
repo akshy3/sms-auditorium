@@ -496,57 +496,36 @@ figcaption {
   letter-spacing: 0.02em;
 }
 
-.sms-cred-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
+.alumni-memory-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.sms-cred-card {
-  background: rgba(255, 254, 249, 0.05);
-  border: 1px solid rgba(255, 254, 249, 0.1);
-  border-radius: var(--radius-lg);
-  padding: 28px 26px;
-  transition: background 200ms ease;
+.alumni-memory-list li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255, 254, 249, 0.1);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: rgba(255, 254, 249, 0.88);
+  line-height: 1.4;
 }
 
-.sms-cred-card:hover {
-  background: rgba(255, 254, 249, 0.08);
+.alumni-memory-list li:last-child {
+  border-bottom: none;
 }
 
-.sms-cred-icon {
-  width: 40px;
-  height: 40px;
-  color: var(--gold-light);
-  margin-bottom: 16px;
-}
-
-.sms-cred-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.sms-cred-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 8px;
-}
-
-.sms-cred-card h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.35;
-  margin-bottom: 10px;
-}
-
-.sms-cred-card p {
-  font-size: 0.9rem;
-  color: rgba(255, 254, 249, 0.68);
-  line-height: 1.6;
+.alumni-memory-list li::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold-light);
+  flex: 0 0 auto;
 }
 
 /* ── WHY THIS MATTERS ── */
@@ -1571,7 +1550,6 @@ figcaption {
   /* Layouts */
   .split-section { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 80px); }
   .matter-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .sms-cred-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
   .sms-header { flex-direction: row; gap: 24px; margin-bottom: 48px; }
   .sms-since-badge { display: block; }
   .tier-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
