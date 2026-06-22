@@ -127,7 +127,7 @@ function renderCta(label, url, className = '', modalId = '') {
 const html = `
   <header class="site-header">
     <div class="header-top">
-      <a class="brand" href="#top" aria-label="SMS Auditorium campaign home">
+      <a class="brand" href="#top" aria-label="SMS Auditorium Renovation home">
         <div class="brand-logos">
           <img src="${smsLogo}" alt="SMS CUSAT" class="brand-logo-img" />
           <img src="${cusatLogo}" alt="Cochin University of Science and Technology" class="brand-cusat-img" />
@@ -143,7 +143,7 @@ const html = `
         <span class="nav-bar"></span>
       </button>
     </div>
-    <nav id="site-nav" aria-label="Campaign sections">
+    <nav id="site-nav" aria-label="Site navigation">
       <a href="#scope">Use of Funds</a>
       <a href="#tiers">Contribute</a>
       <a href="#transparency">Transparency</a>
@@ -158,7 +158,7 @@ const html = `
       <img src="${auditoriumInterior}" alt="The proposed Prof. M. V. Pylee Auditorium interior — modern seating, stage and warm lighting" />
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <p class="eyebrow">SMS Auditorium Renovation Campaign</p>
+        <p class="eyebrow">SMS Auditorium Renovation</p>
         <h1 id="hero-title">Together, let us<br>rebuild what<br>built us.</h1>
         <p class="hero-copy">A collective alumni-led effort to transform the SMS auditorium into the Prof. M. V. Pylee Auditorium — a future-ready space for learning, leadership, memory, and pride.</p>
         <div class="hero-actions">
@@ -321,7 +321,7 @@ const html = `
 
     <section class="section transparency-section" id="transparency" aria-labelledby="transparency-title">
       <p class="section-kicker">Transparency and governance</p>
-      <h2 id="transparency-title">Trust is part of the campaign architecture.</h2>
+      <h2 id="transparency-title">Trust is built into how this works.</h2>
       <div class="transparency-grid">
         ${transparencyItems.map(([title, description], i) => `
           <article class="transparency-card">
@@ -335,7 +335,7 @@ const html = `
 
     <section class="section contact-section" id="contact" aria-labelledby="contact-title">
       <p class="section-kicker">Get in touch</p>
-      <h2 id="contact-title">Reach the campaign team directly.</h2>
+      <h2 id="contact-title">Reach the team directly.</h2>
       <div class="contact-grid">
         <div class="contact-people">
           <article class="contact-card">
@@ -385,7 +385,7 @@ const html = `
           ${renderCta('Make a Commitment', COMMITMENT_FORM_URL, 'primary')}
           ${renderCta('Complete Donation', DONATION_FORM_URL, 'secondary', 'donation')}
         </div>
-        ${!COMMITMENT_FORM_URL ? '<p class="form-note">Commitment form coming soon. Contact the campaign team in the meantime.</p>' : ''}
+        ${!COMMITMENT_FORM_URL ? '<p class="form-note">Commitment form coming soon. Contact us in the meantime.</p>' : ''}
       </div>
     </section>
 
