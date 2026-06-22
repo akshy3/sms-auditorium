@@ -184,27 +184,6 @@ const html = `
         </div>
         ${!COMMITMENT_FORM_URL ? '<p class="form-note">Commitment form coming soon. Contact us to pledge now.</p>' : ''}
       </div>
-      <div class="hero-stats-bar">
-        <div class="hero-stat">
-          <strong>₹90.86L</strong>
-          <span>Campaign Target</span>
-        </div>
-        <div class="hero-stat-sep"></div>
-        <div class="hero-stat">
-          <strong>338</strong>
-          <span>Proposed Seats</span>
-        </div>
-        <div class="hero-stat-sep"></div>
-        <div class="hero-stat">
-          <strong>#1</strong>
-          <span>Non-IIM B-School in Kerala</span>
-        </div>
-        <div class="hero-stat-sep"></div>
-        <div class="hero-stat">
-          <strong>60+</strong>
-          <span>Years of Legacy</span>
-        </div>
-      </div>
     </section>
 
     <section class="pylee-section" aria-labelledby="pylee-title">
