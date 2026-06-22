@@ -425,76 +425,6 @@ figcaption {
   font-size: 0.82rem;
 }
 
-/* ── SMS CREDENTIALS ── */
-.sms-section {
-  background: var(--navy);
-  color: var(--white);
-}
-
-.sms-header {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 28px;
-}
-
-.sms-header .section-kicker {
-  color: var(--gold-light);
-  opacity: 1;
-}
-
-.sms-header h2 {
-  color: var(--white);
-}
-
-.sms-since-badge {
-  display: none;
-  flex: 0 0 auto;
-  background: var(--gold);
-  color: var(--navy-deep);
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.1;
-  text-align: center;
-  padding: 10px 16px;
-  border-radius: var(--radius);
-  letter-spacing: 0.02em;
-}
-
-.alumni-memory-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.alumni-memory-list li {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 22px 0;
-  border-bottom: 1px solid rgba(255, 254, 249, 0.1);
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  color: rgba(255, 254, 249, 0.88);
-  line-height: 1.4;
-}
-
-.alumni-memory-list li:last-child {
-  border-bottom: none;
-}
-
-.alumni-memory-list li::before {
-  content: '';
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--gold-light);
-  flex: 0 0 auto;
-}
 
 /* ── SMS TODAY ── */
 .sms-today-section {
@@ -1586,8 +1516,6 @@ figcaption {
   .split-section { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 80px); }
   .sms-today-grid { grid-template-columns: repeat(3, 1fr); }
   .matter-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .sms-header { flex-direction: row; gap: 24px; margin-bottom: 48px; }
-  .sms-since-badge { display: block; }
   .tier-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .transparency-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-top { flex-direction: row; gap: 40px; }
