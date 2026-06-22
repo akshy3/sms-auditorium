@@ -528,6 +528,73 @@ figcaption {
   flex: 0 0 auto;
 }
 
+/* ── SMS TODAY ── */
+.sms-today-section {
+  background: var(--paper-deep);
+}
+
+.sms-today-section h2 {
+  max-width: 640px;
+  margin-bottom: clamp(28px, 4vw, 44px);
+}
+
+.sms-today-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.sms-today-card {
+  padding: 28px 26px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.sms-today-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: rgba(26, 34, 69, 0.2);
+}
+
+.sms-today-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.sms-today-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.sms-today-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.sms-today-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.35;
+  margin-bottom: 10px;
+}
+
+.sms-today-card p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* ── WHY THIS MATTERS ── */
 .matters-section {
   background: var(--white);
@@ -1549,6 +1616,7 @@ figcaption {
 
   /* Layouts */
   .split-section { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(40px, 6vw, 80px); }
+  .sms-today-grid { grid-template-columns: repeat(3, 1fr); }
   .matter-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
   .sms-header { flex-direction: row; gap: 24px; margin-bottom: 48px; }
   .sms-since-badge { display: block; }

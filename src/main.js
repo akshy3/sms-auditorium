@@ -60,6 +60,12 @@ const icons = {
   star: `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
 }
 
+const smsToday = [
+  ['trophy', 'NIRF 2025', '#1 Non-IIM Business School in Kerala', 'Ranked among the top 100 business schools in India out of 4,000+ institutions as per NIRF 2025.'],
+  ['trending', 'Value', "One of India's Highest ROI Propositions", "In management education, powered by CUSAT's NIRF Rank 32 and QS-ranked ecosystem."],
+  ['star', 'Excellence', 'Academic Rigor, Industry Relevance, Affordability', 'Recognised across decades as the defining advantage that sets SMS graduates apart.'],
+]
+
 const auditoriumMemories = [
   'Where journeys began with induction programmes',
   'Where voices were discovered on stage',
@@ -188,6 +194,21 @@ const html = `
             Renaming this auditorium in his honour is not just a gesture — it is a declaration of where we come from and who we aspire to be.
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section sms-today-section" aria-labelledby="sms-today-title">
+      <p class="section-kicker">SMS CUSAT Today</p>
+      <h2 id="sms-today-title">Your alma mater has only grown stronger.</h2>
+      <div class="sms-today-grid">
+        ${smsToday.map(([icon, label, title, desc]) => `
+          <article class="sms-today-card">
+            <div class="sms-today-icon">${icons[icon]}</div>
+            <p class="sms-today-label">${label}</p>
+            <h3>${title}</h3>
+            <p>${desc}</p>
+          </article>
+        `).join('')}
       </div>
     </section>
 
