@@ -168,7 +168,7 @@ const html = `
       <div class="hero-content">
         <p class="eyebrow">SMS Auditorium Renovation</p>
         <h1 id="hero-title">Together, let us<br>rebuild what<br>built us.</h1>
-        <p class="hero-copy">A collective alumni-led effort to transform the SMS auditorium into the Prof. M. V. Pylee Auditorium — a future-ready space for learning, leadership, memory, and pride.</p>
+        <p class="hero-copy">A collective alumni-led effort to transform the SMS auditorium into the Prof. M. V. Pylee Auditorium — a future-ready space for learning, leadership, memory, and pride. This hall was there for your first day, your debates, your farewells. Now it is our turn to be there for it.</p>
         <div class="hero-actions">
           ${renderCta('Make a Commitment', COMMITMENT_FORM_URL, 'primary')}
           ${renderCta('Complete Donation', DONATION_FORM_URL, 'secondary', 'donation')}
