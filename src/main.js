@@ -1,7 +1,6 @@
 import './style.css'
 import { initAnimations } from './animations.js'
 import campusAuditorium from './assets/campus-auditorium.jpg?format=webp&quality=82'
-import auditoriumLayout from './assets/auditorium-layout.jpg?format=webp&quality=82'
 import smsBuilding from './assets/sms.png?format=webp&quality=82'
 import mvPylee from './assets/MV Pylee.png?format=webp&quality=82'
 import auditoriumTransformation from './assets/auditorium-transformation.png?format=webp&quality=82'
@@ -24,22 +23,6 @@ const scopeCategories = [
   ['Civil & Plumbing', 'Toilets, plumbing, generator area and civil works', 'civil'],
 ]
 
-const scopeItems = [
-  ['Civil works', 'Toilets, generator area, front porch, plumbing and sanitary work', '₹15.00L'],
-  ['Ceiling', 'Gypsum ceiling for the auditorium main area', '₹6.50L'],
-  ['Electrification & lighting', 'Lighting upgrades for an academic and event-ready hall', '₹11.00L'],
-  ['Air-conditioning', 'Cooling and comfort improvements', '₹7.50L'],
-  ['Flooring', 'PVC vinyl button flooring with laying', '₹1.50L'],
-  ['Doors', 'Toughened glass doors with aluminium frame', '₹0.55L'],
-  ['Echo-proofing', 'Wall panelling, window closure and soundproof panels', '₹6.50L'],
-  ['Stage steps', 'Movable steps with castor wheels', '₹0.30L'],
-  ['Front facade', 'Aluminium composite panel facade work', '₹2.25L'],
-  ['Seating', 'Refurbishing existing auditorium seats', '₹7.50L'],
-  ['Audio & video', 'Modern AV solution for learning and events', '₹11.00L'],
-  ['Corridor beautification', 'Improved approach to the auditorium', '₹5.00L'],
-  ['Generator', '40 KVA backup power', '₹8.00L'],
-  ['Contingency', '10% project buffer', '₹8.26L'],
-]
 
 const contributionTiers = [
   { title: 'Diamond Patron', amount: '₹20 Lakhs & Above', recognition: 'Lead recognition and premier visibility across the auditorium', tier: 'diamond' },
@@ -199,27 +182,6 @@ const html = `
           </blockquote>
         </div>
         <div class="pylee-right">
-          <div class="pylee-cred">
-            <div class="pylee-cred-icon">${icons.award}</div>
-            <div>
-              <strong>Padma Bhushan</strong>
-              <span>India's third highest civilian honour</span>
-            </div>
-          </div>
-          <div class="pylee-cred">
-            <div class="pylee-cred-icon">${icons.school}</div>
-            <div>
-              <strong>Founder Director, SMS CUSAT</strong>
-              <span>Established the School of Management Studies in 1964</span>
-            </div>
-          </div>
-          <div class="pylee-cred">
-            <div class="pylee-cred-icon">${icons.book}</div>
-            <div>
-              <strong>Father of Management Education in Kerala</strong>
-              <span>Six decades of shaping leaders</span>
-            </div>
-          </div>
           <div class="pylee-dedication">
             Renaming this auditorium in his honour is not just a gesture — it is a declaration of where we come from and who we aspire to be.
           </div>
@@ -280,32 +242,6 @@ const html = `
       </div>
     </section>
 
-    <section class="transformation-section" aria-labelledby="transformation-title">
-      <div class="transformation-inner">
-        <div class="transformation-header">
-          <p class="section-kicker">Before &amp; After</p>
-          <h2 id="transformation-title">See what your support will make possible.</h2>
-        </div>
-        <div class="transformation-figure-wrap">
-          <figure class="transformation-figure">
-            <img src="${auditoriumTransformation}" alt="Before and after comparison of the SMS auditorium renovation" loading="lazy" />
-            <div class="transform-label transform-label-before">
-              <span>Before</span>
-              <p>Current state</p>
-            </div>
-            <div class="transform-label transform-label-after">
-              <span>After</span>
-              <p>Proposed renovation</p>
-            </div>
-            <div class="transform-divider" aria-hidden="true"></div>
-          </figure>
-          <figcaption class="transformation-caption">
-            Left: The SMS Auditorium as it stands today — worn seating, bare walls, ageing infrastructure. &nbsp;·&nbsp; Right: The proposed Prof. M. V. Pylee Auditorium — modern seating, warm lighting, a dignified stage.
-          </figcaption>
-        </div>
-      </div>
-    </section>
-
     <section class="split-section legacy-section" aria-labelledby="legacy-title">
       <div class="split-text">
         <p class="section-kicker">Legacy and future</p>
@@ -337,6 +273,22 @@ const html = `
         </div>
       </div>
 
+      <figure class="transformation-figure">
+        <img src="${auditoriumTransformation}" alt="Before and after comparison of the SMS auditorium renovation" loading="lazy" />
+        <div class="transform-label transform-label-before">
+          <span>Before</span>
+          <p>Current state</p>
+        </div>
+        <div class="transform-label transform-label-after">
+          <span>After</span>
+          <p>Proposed renovation</p>
+        </div>
+        <div class="transform-divider" aria-hidden="true"></div>
+      </figure>
+      <figcaption class="transformation-caption">
+        Left: The SMS Auditorium as it stands today — worn seating, bare walls, ageing infrastructure. &nbsp;·&nbsp; Right: The proposed Prof. M. V. Pylee Auditorium — modern seating, warm lighting, a dignified stage.
+      </figcaption>
+
       <div class="scope-categories">
         ${scopeCategories.map(([title, desc, key]) => `
           <div class="scope-cat">
@@ -347,35 +299,6 @@ const html = `
         `).join('')}
       </div>
 
-      <details class="scope-details">
-        <summary>
-          <span>View complete cost breakdown</span>
-          <span class="details-chevron">${icons.chevron}</span>
-        </summary>
-        <div class="scope-detail-body">
-          <div class="scope-layout">
-            <figure>
-              <img src="${auditoriumLayout}" alt="Proposed layout plan for the CUSAT auditorium renovation" loading="lazy" />
-              <figcaption>Proposed layout plan</figcaption>
-            </figure>
-            <div class="scope-list">
-              ${scopeItems.map(([title, description, amount]) => `
-                <article class="scope-item">
-                  <div class="scope-item-text">
-                    <h3>${title}</h3>
-                    <p>${description}</p>
-                  </div>
-                  <strong class="scope-item-amount">${amount}</strong>
-                </article>
-              `).join('')}
-              <article class="scope-item scope-total-row">
-                <strong>Project Total</strong>
-                <strong>₹90.86L</strong>
-              </article>
-            </div>
-          </div>
-        </div>
-      </details>
     </section>
 
     <section class="section tiers-section" id="tiers" aria-labelledby="tiers-title">
