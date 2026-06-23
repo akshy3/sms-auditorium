@@ -233,7 +233,7 @@ function initBackToTop() {
   const btn = document.createElement('a')
   btn.className = 'back-to-top'
   btn.href = './join.html'
-  btn.textContent = 'Join the Campaign'
+  btn.textContent = 'Restore the Hall'
   document.body.appendChild(btn)
 
   let heroVisible = true
