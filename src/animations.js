@@ -225,21 +225,23 @@ function initDonationModal() {
   })
 }
 
-// ── BACK TO TOP ────────────────────────────────────────────────────────────
+// ── FLOATING JOIN CTA ──────────────────────────────────────────────────────
 function initBackToTop() {
-  const btn = document.createElement('button')
+  const heroCta = document.querySelector('.hero-actions')
+  if (!heroCta) return  // only on pages with a hero (not the join page itself)
+
+  const btn = document.createElement('a')
   btn.className = 'back-to-top'
-  btn.setAttribute('aria-label', 'Back to top')
-  btn.innerHTML = `<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>`
+  btn.href = './join.html'
+  btn.textContent = 'Join the Campaign'
+
   document.body.appendChild(btn)
 
-  window.addEventListener('scroll', () => {
-    btn.classList.toggle('visible', window.scrollY > 400)
-  }, { passive: true })
-
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  })
+  const obs = new IntersectionObserver(
+    ([entry]) => btn.classList.toggle('visible', !entry.isIntersecting),
+    { threshold: 0 }
+  )
+  obs.observe(heroCta)
 }
 
 // ── COPY BUTTONS ───────────────────────────────────────────────────────────
@@ -266,15 +268,18 @@ function initCopyButtons() {
 
 // ── SCROLL SPY ─────────────────────────────────────────────────────────────
 function initScrollSpy() {
-  const sectionIds = ['scope', 'tiers', 'transparency', 'contact']
-  const links = sectionIds.map(id => document.querySelector(`.site-header nav a[href="#${id}"]`))
-  const sections = sectionIds.map(id => document.getElementById(id))
+  const pairs = [...document.querySelectorAll('.site-header nav a:not(.nav-cta)')]
+    .filter(a => (a.getAttribute('href') || '').startsWith('#'))
+    .map(link => ({ link, section: document.getElementById(link.getAttribute('href').slice(1)) }))
+    .filter(p => p.section)
+
+  if (!pairs.length) return
 
   function update() {
-    const threshold = window.scrollY + 100
+    const threshold = window.scrollY + 120
     let current = -1
-    sections.forEach((el, i) => { if (el && el.offsetTop <= threshold) current = i })
-    links.forEach((link, i) => link?.classList.toggle('nav-active', i === current))
+    pairs.forEach(({ section }, i) => { if (section.offsetTop <= threshold) current = i })
+    pairs.forEach(({ link }, i) => link.classList.toggle('nav-active', i === current))
   }
 
   window.addEventListener('scroll', update, { passive: true })
