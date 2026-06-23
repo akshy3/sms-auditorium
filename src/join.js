@@ -2,55 +2,8 @@ import './style.css'
 import { initAnimations } from './animations.js'
 import smsLogo from './assets/SMS Logo.png?format=webp&lossless=true'
 import cusatLogo from './assets/Logo of CUSAT.jpg?format=webp&quality=82'
-import { COMMITMENT_FORM_URL, DONATION_FORM_URL, contributionTiers, renderCta, icons } from './shared.js'
-
-const qrPlaceholderSvg = `<svg class="qr-placeholder-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-  <rect x="5" y="5" width="28" height="28" rx="2" fill="currentColor"/>
-  <rect x="10" y="10" width="18" height="18" rx="1" fill="white"/>
-  <rect x="14" y="14" width="10" height="10" fill="currentColor"/>
-  <rect x="67" y="5" width="28" height="28" rx="2" fill="currentColor"/>
-  <rect x="72" y="10" width="18" height="18" rx="1" fill="white"/>
-  <rect x="76" y="14" width="10" height="10" fill="currentColor"/>
-  <rect x="5" y="67" width="28" height="28" rx="2" fill="currentColor"/>
-  <rect x="10" y="72" width="18" height="18" rx="1" fill="white"/>
-  <rect x="14" y="76" width="10" height="10" fill="currentColor"/>
-  <rect x="40" y="5" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="50" y="5" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="60" y="5" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="40" y="14" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="50" y="14" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="40" y="23" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="60" y="23" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="5" y="40" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="14" y="40" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="23" y="40" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="40" y="40" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="50" y="40" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="60" y="40" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="70" y="40" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="80" y="40" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="89" y="40" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="5" y="50" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="23" y="50" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="40" y="50" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="60" y="50" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="80" y="50" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="5" y="60" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="14" y="60" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="40" y="60" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="50" y="60" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="70" y="60" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="89" y="60" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="40" y="70" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="60" y="70" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="80" y="70" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="40" y="80" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="50" y="80" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="89" y="80" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="40" y="89" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-  <rect x="60" y="89" width="6" height="6" rx="1" fill="currentColor" opacity="0.5"/>
-  <rect x="70" y="89" width="6" height="6" rx="1" fill="currentColor" opacity="0.7"/>
-</svg>`
+import QRCode from 'qrcode'
+import { COMMITMENT_FORM_URL, DONATION_FORM_URL, UPI_URL, contributionTiers, renderCta, icons } from './shared.js'
 
 const html = `
   <header class="site-header">
@@ -85,6 +38,18 @@ const html = `
       <p class="section-kicker">Join the Campaign</p>
       <h1 id="give-title">Your contribution<br>builds something<br>that lasts.</h1>
       <p class="give-lead">The Prof. M. V. Pylee Auditorium renovation is an alumni-led effort to restore a space that shaped every one of us. Every contribution — at any level — becomes part of the hall's lasting legacy.</p>
+      <div class="give-paths">
+        <div class="give-path">
+          <div class="give-path-icon">${icons.award}</div>
+          <strong>Make a commitment</strong>
+          <p>Pledge your intent to give. We'll reach out to coordinate your contribution at a time that works for you.</p>
+        </div>
+        <div class="give-path">
+          <div class="give-path-icon">${icons.bank}</div>
+          <strong>Transfer now</strong>
+          <p>Ready to give today? Transfer via bank or UPI, then confirm with a short form — takes under 5 minutes.</p>
+        </div>
+      </div>
       <div class="give-intro-actions">
         ${renderCta('I want to commit', COMMITMENT_FORM_URL, 'primary', 'Fill the form')}
         <button class="button secondary" type="button" data-open-modal="donation">I want to donate<span>See how to pay</span></button>
@@ -183,10 +148,7 @@ const html = `
                 <div class="modal-bank-row"><dt>IFSC</dt><dd class="modal-mono">SBIN0070235</dd></div>
               </dl>
               <div class="modal-qr">
-                <div class="modal-qr-inner">
-                  ${qrPlaceholderSvg}
-                  <div class="modal-qr-badge">QR coming soon</div>
-                </div>
+                <canvas class="upi-qr" aria-label="UPI QR code for SMS Infrastructure Development"></canvas>
                 <p class="modal-qr-label">Scan to pay via UPI</p>
               </div>
             </div>
@@ -218,3 +180,9 @@ const html = `
 
 document.querySelector('#app').innerHTML = html
 initAnimations()
+
+QRCode.toCanvas(document.querySelector('.upi-qr'), UPI_URL, {
+  width: 160,
+  margin: 2,
+  color: { dark: '#1a2245', light: '#fffef9' },
+})

@@ -1,5 +1,6 @@
 export const COMMITMENT_FORM_URL = 'https://forms.gle/f9nAfvDYh3UQ4uhX8'
 export const DONATION_FORM_URL = 'https://forms.gle/RaiL2NQ4xJ8MWcab9'
+export const UPI_URL = 'upi://pay?pa=sbibhim.022211900733521-ym637397@sbipay&pn=SMS%20INFRASTRUCTURE%20DEVELO&mc=8220&tn=Static%20QR&mode=01&orgid=180080&mid=022211900733521&msid=23062026093528&purpose=00'
 
 export const contributionTiers = [
   { title: 'Diamond Patron', amount: '₹20 Lakhs & Above', recognition: 'Lead recognition and premier visibility across the auditorium', tier: 'diamond' },
