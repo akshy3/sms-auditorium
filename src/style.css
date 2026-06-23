@@ -168,6 +168,13 @@ h1, h2, h3, p, blockquote, ul { margin: 0; }
   background: var(--navy-soft);
 }
 
+.nav-cta-label {
+  margin: 8px 14px 2px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
 .nav-cta {
   margin-left: 0;
   margin-top: 4px;

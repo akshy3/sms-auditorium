@@ -14,8 +14,8 @@ const html = `
           <img src="${cusatLogo}" alt="Cochin University of Science and Technology" class="brand-cusat-img" />
         </div>
         <div class="brand-text">
-          <strong>Prof. M. V. Pylee Auditorium</strong>
-          <small>School of Management Studies · CUSAT</small>
+          <strong>SMS Auditorium Renovation</strong>
+          <small>as Prof. M. V. Pylee Auditorium</small>
         </div>
       </a>
       <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav">
@@ -105,8 +105,8 @@ const html = `
         <div class="footer-brand">
           <img src="${smsLogo}" alt="SMS CUSAT" class="footer-sms-logo" loading="lazy" />
           <div>
-            <strong>Prof. M. V. Pylee Auditorium</strong>
-            <p>School of Management Studies<br>Cochin University of Science and Technology</p>
+            <strong>SMS Auditorium Renovation</strong>
+            <p>as Prof. M. V. Pylee Auditorium<br>School of Management Studies · CUSAT</p>
           </div>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
