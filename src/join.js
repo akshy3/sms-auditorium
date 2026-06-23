@@ -2,7 +2,7 @@ import './style.css'
 import { initAnimations } from './animations.js'
 import smsLogo from './assets/SMS Logo.png?format=webp&lossless=true'
 import cusatLogo from './assets/Logo of CUSAT.jpg?format=webp&quality=82'
-import { COMMITMENT_FORM_URL, DONATION_FORM_URL, contributionTiers, renderCta } from './shared.js'
+import { COMMITMENT_FORM_URL, DONATION_FORM_URL, contributionTiers, renderCta, icons } from './shared.js'
 
 const qrPlaceholderSvg = `<svg class="qr-placeholder-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
   <rect x="5" y="5" width="28" height="28" rx="2" fill="currentColor"/>
@@ -75,7 +75,7 @@ const html = `
       <a href="./">← Campaign</a>
       <a href="#tiers">Tiers</a>
       <a href="#contact">Contact</a>
-      <a href="${COMMITMENT_FORM_URL}" target="_blank" rel="noreferrer" class="nav-cta">Make a Commitment</a>
+      <a href="${COMMITMENT_FORM_URL}" target="_blank" rel="noreferrer" class="nav-cta">I want to commit</a>
     </nav>
   </header>
 
@@ -86,8 +86,8 @@ const html = `
       <h1 id="give-title">Your contribution<br>builds something<br>that lasts.</h1>
       <p class="give-lead">The Prof. M. V. Pylee Auditorium renovation is an alumni-led effort to restore a space that shaped every one of us. Every contribution — at any level — becomes part of the hall's lasting legacy.</p>
       <div class="give-intro-actions">
-        ${renderCta('Make a Commitment', COMMITMENT_FORM_URL, 'primary')}
-        <button class="button secondary" type="button" data-open-modal="donation">Complete Donation<span>How to pay</span></button>
+        ${renderCta('I want to commit', COMMITMENT_FORM_URL, 'primary', 'Fill the form')}
+        <button class="button secondary" type="button" data-open-modal="donation">I want to donate<span>See how to pay</span></button>
       </div>
     </section>
 
@@ -207,8 +207,8 @@ const html = `
             <h3>Confirm your donation</h3>
             <p>Fill in your name, batch year, and transaction reference, then upload the screenshot so we can acknowledge your contribution.</p>
             ${DONATION_FORM_URL
-              ? `<a class="button primary modal-cta" href="${DONATION_FORM_URL}" target="_blank" rel="noreferrer">Confirm my donation<span>Open Form</span></a>`
-              : `<button class="button primary modal-cta" type="button" disabled>Confirm my donation<span>Coming soon</span></button>`}
+              ? `<a class="button primary modal-cta" href="${DONATION_FORM_URL}" target="_blank" rel="noreferrer">I've made my transfer<span>Upload receipt</span></a>`
+              : `<button class="button primary modal-cta" type="button" disabled>I've made my transfer<span>Coming soon</span></button>`}
           </div>
         </li>
       </ol>

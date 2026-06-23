@@ -234,14 +234,27 @@ function initBackToTop() {
   btn.className = 'back-to-top'
   btn.href = './join.html'
   btn.textContent = 'Join the Campaign'
-
   document.body.appendChild(btn)
 
-  const obs = new IntersectionObserver(
-    ([entry]) => btn.classList.toggle('visible', !entry.isIntersecting),
+  let heroVisible = true
+  let footerVisible = false
+
+  function update() {
+    btn.classList.toggle('visible', !heroVisible && !footerVisible)
+  }
+
+  new IntersectionObserver(
+    ([e]) => { heroVisible = e.isIntersecting; update() },
     { threshold: 0 }
-  )
-  obs.observe(heroCta)
+  ).observe(heroCta)
+
+  const footer = document.querySelector('.site-footer')
+  if (footer) {
+    new IntersectionObserver(
+      ([e]) => { footerVisible = e.isIntersecting; update() },
+      { threshold: 0 }
+    ).observe(footer)
+  }
 }
 
 // ── COPY BUTTONS ───────────────────────────────────────────────────────────

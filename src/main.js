@@ -8,7 +8,8 @@ import auditoriumInterior from './assets/auditorium (1).png?format=webp&quality=
 import smsLogo from './assets/SMS Logo.png?format=webp&lossless=true'
 import cusatLogo from './assets/Logo of CUSAT.jpg?format=webp&quality=82'
 import smscusatLogo from './assets/smscusat.png?format=webp&lossless=true'
-import { icons } from './shared.js'
+import brochurePdf from './assets/PROF. M V PYLEE AUDITORIUM.pdf?url'
+import { icons, contributionTiers, COMMITMENT_FORM_URL, renderCta } from './shared.js'
 
 const scopeCategories = [
   ['Seating Refurbishment', 'Refurbishing all auditorium seating for comfort and longevity', 'seat'],
@@ -62,9 +63,10 @@ const html = `
       </button>
     </div>
     <nav id="site-nav" aria-label="Site navigation">
-      <a href="#scope">Use of Funds</a>
+      <a href="#scope">The Renovation</a>
       <a href="#transparency">Transparency</a>
       <a href="#contact">Contact</a>
+      <a href="${brochurePdf}" download="Prof-MV-Pylee-Auditorium-Brochure.pdf">Brochure</a>
       <a href="./join.html" class="nav-cta">Join the Campaign</a>
     </nav>
   </header>
@@ -103,22 +105,6 @@ const html = `
         </div>
       </div>
     </section>
-
-    <section class="section sms-today-section" aria-labelledby="sms-today-title">
-      <p class="section-kicker">SMS CUSAT Today</p>
-      <h2 id="sms-today-title">Your alma mater has only grown stronger.</h2>
-      <div class="sms-today-grid">
-        ${smsToday.map(([icon, label, title, desc]) => `
-          <article class="sms-today-card">
-            <div class="sms-today-icon">${icons[icon]}</div>
-            <p class="sms-today-label">${label}</p>
-            <h3>${title}</h3>
-            <p>${desc}</p>
-          </article>
-        `).join('')}
-      </div>
-    </section>
-
 
     <section class="section matters-section" aria-labelledby="matters-title">
       <p class="section-kicker">Why this project matters</p>
@@ -162,13 +148,23 @@ const html = `
     <section class="section scope-section" id="scope" aria-labelledby="scope-title">
       <div class="scope-header">
         <div>
-          <p class="section-kicker">Use of funds</p>
-          <h2 id="scope-title">A comprehensive ₹90.86L renovation.</h2>
+          <p class="section-kicker">The Renovation</p>
+          <h2 id="scope-title">What we're rebuilding, and why.</h2>
         </div>
         <div class="scope-total-badge">
           <span>Total Estimate</span>
           <strong>₹90.86 Lakhs</strong>
         </div>
+      </div>
+
+      <div class="scope-categories">
+        ${scopeCategories.map(([title, desc, key]) => `
+          <div class="scope-cat">
+            <div class="scope-cat-icon">${icons[key]}</div>
+            <h3>${title}</h3>
+            <p>${desc}</p>
+          </div>
+        `).join('')}
       </div>
 
       <figure class="transformation-figure">
@@ -187,16 +183,21 @@ const html = `
         Left: The SMS Auditorium as it stands today — worn seating, bare walls, ageing infrastructure. &nbsp;·&nbsp; Right: The proposed Prof. M. V. Pylee Auditorium — modern seating, warm lighting, a dignified stage.
       </figcaption>
 
-      <div class="scope-categories">
-        ${scopeCategories.map(([title, desc, key]) => `
-          <div class="scope-cat">
-            <div class="scope-cat-icon">${icons[key]}</div>
+    </section>
+
+    <section class="section sms-today-section" aria-labelledby="sms-today-title">
+      <p class="section-kicker">SMS CUSAT Today</p>
+      <h2 id="sms-today-title">Your alma mater has only grown stronger.</h2>
+      <div class="sms-today-grid">
+        ${smsToday.map(([icon, label, title, desc]) => `
+          <article class="sms-today-card">
+            <div class="sms-today-icon">${icons[icon]}</div>
+            <p class="sms-today-label">${label}</p>
             <h3>${title}</h3>
             <p>${desc}</p>
-          </div>
+          </article>
         `).join('')}
       </div>
-
     </section>
 
     <section class="section transparency-section" id="transparency" aria-labelledby="transparency-title">
@@ -216,8 +217,7 @@ const html = `
     <section class="section contact-section" id="contact" aria-labelledby="contact-title">
       <p class="section-kicker">Get in touch</p>
       <h2 id="contact-title">Reach the team directly.</h2>
-      <div class="contact-grid">
-        <div class="contact-people">
+      <div class="contact-people">
           <article class="contact-card">
             <div class="contact-avatar">BA</div>
             <div class="contact-info">
@@ -236,21 +236,23 @@ const html = `
             </div>
           </article>
         </div>
-        <div class="bank-card">
-          <div class="bank-card-header">
-            ${icons.bank}
-            <strong>Bank Transfer Details</strong>
-          </div>
-          <dl class="bank-dl">
-            <div class="bank-row"><dt>Account Name</dt><dd>SMS Infrastructure Development</dd></div>
-            <div class="bank-row"><dt>Bank</dt><dd>State Bank of India</dd></div>
-            <div class="bank-row"><dt>Branch</dt><dd>Cochin University Campus Branch</dd></div>
-            <div class="bank-row"><dt>Account Number</dt><dd class="bank-mono">44972355745<button class="copy-btn" data-copy="44972355745" aria-label="Copy account number">${icons.copy}</button></dd></div>
-            <div class="bank-row"><dt>IFSC Code</dt><dd class="bank-mono">SBIN0070235<button class="copy-btn" data-copy="SBIN0070235" aria-label="Copy IFSC code">${icons.copy}</button></dd></div>
-          </dl>
-          <p class="bank-note">Please share your name and batch year after transferring so we can acknowledge your contribution.</p>
-        </div>
+    </section>
+
+    <section class="section tiers-section" id="tiers" aria-labelledby="tiers-title">
+      <p class="section-kicker">Contribution tiers</p>
+      <h2 id="tiers-title">Every name will be remembered.</h2>
+      <p class="tiers-intro">Choose a level that reflects your connection to SMS CUSAT. Every contribution, large or small, will be acknowledged and remembered.</p>
+      <div class="tier-grid">
+        ${contributionTiers.map(({ title, amount, recognition, tier }) => `
+          <article class="tier-card tier-${tier}">
+            <div class="tier-mark"></div>
+            <h3>${title}</h3>
+            <strong class="tier-amount">${amount}</strong>
+            <p>${recognition}</p>
+          </article>
+        `).join('')}
       </div>
+      <p class="tier-note">Recognition may include donor plaques, named sections, seating rows, audio systems, air-conditioning, stage elements, and digital acknowledgements, subject to institutional policy.</p>
     </section>
 
     <section class="final-cta" aria-labelledby="final-cta-title">
@@ -280,10 +282,11 @@ const html = `
           </div>
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="#scope">Use of Funds</a>
+          <a href="#scope">The Renovation</a>
           <a href="./join.html">Join the Campaign</a>
           <a href="#transparency">Transparency</a>
           <a href="#contact">Contact</a>
+          <a href="${brochurePdf}" download="Prof-MV-Pylee-Auditorium-Brochure.pdf">Download Brochure</a>
         </nav>
       </div>
       <div class="footer-bottom">

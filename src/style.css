@@ -1076,6 +1076,10 @@ figcaption {
   line-height: 1.6;
 }
 
+.tiers-cta {
+  margin-top: 40px;
+}
+
 /* ── PARTICIPATION ── */
 .participation-section {
   background: var(--white);
@@ -1261,6 +1265,7 @@ figcaption {
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid rgba(255, 254, 249, 0.08);
+  max-width: 560px;
 }
 
 .bank-card-header {
