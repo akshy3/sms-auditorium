@@ -68,7 +68,7 @@ const html = `
       <a href="#contact">Contact</a>
       <a href="${brochurePdf}" download="Prof-MV-Pylee-Auditorium-Brochure.pdf">Brochure</a>
       <p class="nav-cta-label">Be part of this restoration.</p>
-      <a href="./join.html" class="nav-cta">Restore the Hall</a>
+      <a href="./join.html" class="nav-cta">Be Part of This</a>
     </nav>
   </header>
 
@@ -82,7 +82,7 @@ const html = `
         <h1 id="hero-title">Together, let us<br>rebuild what<br>built us.</h1>
         <p class="hero-copy">The SMS Auditorium has witnessed every beginning, celebration, and farewell since 1964. Today, as alumni, we restore it together — transforming it into the Prof. M. V. Pylee Auditorium, a future-ready space for learning, leadership, memory, and pride. This hall was there for your first day, your debates, your farewells. Now it is our turn to be there for it.</p>
         <div class="hero-actions">
-          <a class="button primary" href="./join.html">Restore the Hall<span>See how to give</span></a>
+          <a class="button primary" href="./join.html">Be Part of This<span>See how to give</span></a>
         </div>
       </div>
     </section>
@@ -265,7 +265,7 @@ const html = `
         <h2 id="final-cta-title">Let us rebuild a space that has been part of all our journeys.</h2>
         <p>Your commitment helps honour Prof. M. V. Pylee, restore a space that shaped generations, and create an auditorium that will inspire the students who follow.</p>
         <div class="hero-actions">
-          <a class="button primary" href="./join.html">Restore the Hall<span>See how to give</span></a>
+          <a class="button primary" href="./join.html">Be Part of This<span>See how to give</span></a>
         </div>
       </div>
     </section>
@@ -284,7 +284,7 @@ const html = `
         </div>
         <nav class="footer-nav" aria-label="Footer navigation">
           <a href="#scope">The Renovation</a>
-          <a href="./join.html">Restore the Hall</a>
+          <a href="./join.html">Be Part of This</a>
           <a href="#transparency">Transparency</a>
           <a href="#contact">Contact</a>
           <a href="${brochurePdf}" download="Prof-MV-Pylee-Auditorium-Brochure.pdf">Download Brochure</a>
