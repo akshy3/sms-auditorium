@@ -93,7 +93,7 @@ function initCounters() {
 
     // Parse: optional prefix (#), digits+commas, optional suffix (+, L, K)
     const m = raw.match(/^([#₹]?)([\d,]+(?:\.\d+)?)([L+K]*)$/)
-    if (!m || m[1] === '#') return  // skip #1 — it's not a real counter
+    if (!m || m[1] === '#') return  // skip #1: not a real counter
 
     const [, prefix, numStr, suffix] = m
     const target = parseFloat(numStr.replace(/,/g, ''))

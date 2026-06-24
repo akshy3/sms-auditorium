@@ -37,7 +37,7 @@ const html = `
     <section class="give-intro" aria-labelledby="give-title">
       <p class="section-kicker">Join the Campaign</p>
       <h1 id="give-title">Your contribution<br>builds something<br>that lasts.</h1>
-      <p class="give-lead">The Prof. M. V. Pylee Auditorium renovation is an alumni-led effort to restore a space that shaped every one of us. Every contribution — at any level — becomes part of the hall's lasting legacy.</p>
+      <p class="give-lead">The Prof. M. V. Pylee Auditorium renovation is an alumni-led effort to restore a space that shaped every one of us. Every contribution, at any level, becomes part of the hall's lasting legacy.</p>
       <div class="give-paths">
         <div class="give-path">
           <div class="give-path-icon">${icons.award}</div>
@@ -47,7 +47,7 @@ const html = `
         <div class="give-path">
           <div class="give-path-icon">${icons.bank}</div>
           <strong>Transfer now</strong>
-          <p>Ready to give today? Transfer via bank or UPI, then confirm with a short form — takes under 5 minutes.</p>
+          <p>Ready to give today? Transfer via bank or UPI, then confirm with a short form in under 5 minutes.</p>
         </div>
       </div>
       <div class="give-intro-actions">
@@ -159,7 +159,7 @@ const html = `
           <div class="modal-step-num">02</div>
           <div class="modal-step-body">
             <h3>Screenshot your payment confirmation</h3>
-            <p>Take a screenshot of the success screen from your UPI app or bank. You will need to upload it in the next step — keep it handy.</p>
+            <p>Take a screenshot of the success screen from your UPI app or bank. You will need to upload it in the next step, so keep it handy.</p>
           </div>
         </li>
 

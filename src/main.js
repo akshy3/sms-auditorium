@@ -75,12 +75,12 @@ const html = `
   <main id="top">
 
     <section class="hero-section" aria-labelledby="hero-title">
-      <img src="${auditoriumInterior}" alt="The proposed Prof. M. V. Pylee Auditorium interior — modern seating, stage and warm lighting" />
+      <img src="${auditoriumInterior}" alt="The proposed Prof. M. V. Pylee Auditorium interior: modern seating, stage and warm lighting" />
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <p class="eyebrow">Rebuilding a Legacy</p>
         <h1 id="hero-title">Together, let us<br>rebuild what<br>built us.</h1>
-        <p class="hero-copy">The SMS Auditorium has witnessed every beginning, celebration, and farewell since 1964. Today, as alumni, we restore it together — transforming it into the Prof. M. V. Pylee Auditorium, a future-ready space for learning, leadership, memory, and pride. This hall was there for your first day, your debates, your farewells. Now it is our turn to be there for it.</p>
+        <p class="hero-copy">The SMS Auditorium has witnessed every beginning, celebration, and farewell since 1964. Today, as alumni, we restore it together, transforming it into the Prof. M. V. Pylee Auditorium, a future-ready space for learning, leadership, memory, and pride. This hall was there for your first day, your debates, your farewells. Now it is our turn to be there for it.</p>
         <div class="hero-actions">
           <a class="button primary" href="./join.html">Be Part of This<span>See how to give</span></a>
         </div>
@@ -96,12 +96,12 @@ const html = `
             <img src="${mvPylee}" alt="Prof. M. V. Pylee, Founder Director of SMS CUSAT" class="pylee-portrait" loading="lazy" />
           </div>
           <blockquote class="pylee-quote">
-            "The visionary Founder Director of the School of Management Studies — Father of management education in Kerala and a mentor who shaped generations of leaders. His contributions extended far beyond the classroom, influencing academia, industry, and institutional development."
+            "The visionary Founder Director of the School of Management Studies, Father of management education in Kerala and a mentor who shaped generations of leaders. His contributions extended far beyond the classroom, influencing academia, industry, and institutional development."
           </blockquote>
         </div>
         <div class="pylee-right">
           <div class="pylee-dedication">
-            Renaming this auditorium in his honour is not just a gesture — it is a declaration of where we come from and who we aspire to be.
+            Renaming this auditorium in his honour is not just a gesture. It is a declaration of where we come from and who we aspire to be.
           </div>
         </div>
       </div>
@@ -181,7 +181,7 @@ const html = `
         <div class="transform-divider" aria-hidden="true"></div>
       </figure>
       <figcaption class="transformation-caption">
-        Left: The SMS Auditorium as it stands today — worn seating, bare walls, ageing infrastructure. &nbsp;·&nbsp; Right: The proposed Prof. M. V. Pylee Auditorium — modern seating, warm lighting, a dignified stage.
+        Left: The SMS Auditorium as it stands today: worn seating, bare walls, ageing infrastructure. &nbsp;·&nbsp; Right: The proposed Prof. M. V. Pylee Auditorium: modern seating, warm lighting, a dignified stage.
       </figcaption>
 
     </section>
@@ -257,7 +257,7 @@ const html = `
     </section>
 
     <section class="final-cta" aria-labelledby="final-cta-title">
-      <img src="${campusAuditorium}" alt="SMS CUSAT campus — home of the Prof. M. V. Pylee Auditorium" class="final-cta-bg" loading="lazy" />
+      <img src="${campusAuditorium}" alt="SMS CUSAT campus, home of the Prof. M. V. Pylee Auditorium" class="final-cta-bg" loading="lazy" />
       <div class="final-cta-overlay"></div>
       <div class="final-cta-inner">
         <img src="${smscusatLogo}" alt="School of Management Studies, CUSAT" class="cta-institution-logo" loading="lazy" />
